@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="container">
+
+        <p>
+            RESULTS FOR USER,
+            <%= email %>.
+        </p>
+        <% for(var i = 0; i < result.length; i++) {%>
+        <p>
+            For quiz
+            <%=i + 1%> <br>
+            You answered
+            <b> <%= result[i].userAnswers %> </b> questions correctly out of <b>
+                <%= result[i].count %> </b>
+        </p>
+    <%}%>
+        
+
+    </div>
+</body>
+
+</html>

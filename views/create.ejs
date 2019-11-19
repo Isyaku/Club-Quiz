@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <p class="response">
+                <%= response %>
+            </p>
+            <form action="/api/v1/register/question" method="post">
+                <input name="question" type="text" class="ghost-input" placeholder="Enter a question" required>
+                <input name="option1" type="text" class="ghost-input" placeholder="Enter an option" required>
+                <input name="option2" type="text" class="ghost-input" placeholder="Enter an option" required>
+                <input name="option3" type="text" class="ghost-input" placeholder="Enter an option" required>
+
+                <select class="ghost-drop" name="answer">
+                    <option value="">Options</option>
+                    <option value="option1">Option1</option>
+                    <option value="option2">Option2</option>
+                    <option value="option3">Option3</option>
+                </select>
+                <input type="submit" class="ghost-button" value="submit">
+            </form>
+
+        </fieldset>
+    </div>
+</body>
+
+</html>

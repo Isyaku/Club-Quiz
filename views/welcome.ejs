@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Welcome to The Club
+        </h1>
+        <p> To attempt The Club's quiz, enter your email address and click on the link below. </p>
+        <form action="/api/v1/take/quiz" method="POST">
+            <input class="ghost-input" type="text" name = email placeholder="enter your email address" /> <br>
+            <button class="ghost-button" type="submit"> Take Quiz </button>
+        </form>
+    </div>
+</body>
+
+</html>

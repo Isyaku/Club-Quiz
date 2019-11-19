@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>THE CLUB'S QUIZ</h1>
+        <form action="/api/v1/club/answers" method="POST">
+            <% for(var i = 0; i < result.length; i++) {%>
+            <p>
+                Q
+                <%=i + 1%>)
+                <%= result[i].question %>
+            </p>
+
+            <input type="radio" name="<%=result[i]._id %>" value="option1" />
+            <%= result[i].option1 %> <br>
+            <input type="radio" name="<%=result[i]._id %>" value="option2" />
+            <%= result[i].option2 %><br>
+            <input type="radio" name="<%=result[i]._id %>" value="option3" />
+            <%= result[i].option3 %>
+
+            <% } %>
+
+            <input name="email" value="<%= email %>" type="hidden" />
+            <div>
+                <button class="ghost-submit" type="submit"> Submit </button>
+            </div>
+
+        </form>
+
+
+
+    </div>
+</body>
+
+</html>

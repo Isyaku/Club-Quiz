@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            The Club's Result Checker
+        </h1>
+
+        <p>
+            To check your result, enter your email and click on the "Check Now" button below.
+        </p>
+    
+        <form action="/api/v1/view/results" method="POST">
+            <input class="ghost-mail" type="text" name = email placeholder="enter your email address" />
+            <button class="ghost-submit" type="submit"> Check Now </button>
+        </form>
+        
+
+    </div>
+</body>
+
+</html>
