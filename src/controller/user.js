@@ -52,7 +52,7 @@ const userResult = async (req, res) => {
 
 	try {
 		const result = await resultServices.findResult(email)
-		if (!result.length) {
+		if (!result) {
 			return res.render('error', { error: 'User does not exist' })
 		}
 
