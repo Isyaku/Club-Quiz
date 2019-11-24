@@ -1,7 +1,7 @@
 const questionServices = require('../services/questions')
 
 const register = async (req, res) => {
-	res.render('create', { response: '' })
+	res.render('createQuestion', { response: '' })
 }
 const registerQuestion = async (req, res) => {
 	let data = {
@@ -49,7 +49,7 @@ const getQuestions = async (req, res) => {
 		res.render('questions', { result, email })
 
 	} catch (error) {
-		return res.render( 'error', {error: 'Uanble to fetch questions' })
+		return res.render( 'errorLog', {error: 'Uanble to fetch questions' })
 	}
 }
 
