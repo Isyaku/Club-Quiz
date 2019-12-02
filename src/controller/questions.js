@@ -34,10 +34,10 @@ const registerQuestion = async (req, res) => {
 		}
 
 		await questionServices.creatQuestion(data)
-		res.render('create', { response: 'You just added a question' })
+		res.render('createQuestion', { response: 'You just added a question' })
 
 	} catch (error) {
-		return res.render( 'error', {error: 'Uanble to register question' })
+		return res.render('error', { error: 'Uanble to register question' })
 	}
 }
 
@@ -49,7 +49,7 @@ const getQuestions = async (req, res) => {
 		res.render('questions', { result, email })
 
 	} catch (error) {
-		return res.render( 'errorLog', {error: 'Uanble to fetch questions' })
+		return res.render('errorLog', { error: 'Uanble to fetch questions' })
 	}
 }
 
